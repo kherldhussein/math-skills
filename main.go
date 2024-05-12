@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	if len(os.Args) < 2 {
+	if len(os.Args) != 2 {
 		log.Print("usage: go run . data.txt")
 		return
 	}
