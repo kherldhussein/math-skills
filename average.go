@@ -1,6 +1,6 @@
 package main
 
-func Average(x []float64) float64 {
+func Average(x []float64) int {
 	if len(x) == 0 {
 		return 0
 	}
@@ -8,5 +8,5 @@ func Average(x []float64) float64 {
 	for _, x1 := range x {
 		total += x1
 	}
-	return total / float64(len(x))
+	return int(total / float64(len(x)))
 }
