@@ -11,7 +11,7 @@ This Go program reads data from a file and calculates the average, median, varia
 
 ## Requirements
 
-[Go](https://go.dev/) installed on your system
+Installed and setup [Go](https://go.dev/) lang on your system.
 
 
 ## Usage
