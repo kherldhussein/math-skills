@@ -35,3 +35,7 @@ go run . data.txt
         Median: 4
         Variance: 5
         Standard Deviation: 65
+
+## Contribution
+
+We encourage you to make changes and submit pull requestions 
