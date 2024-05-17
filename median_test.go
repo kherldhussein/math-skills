@@ -16,7 +16,7 @@ func TestMedian(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := Median(tt.args.x); got != tt.expected {
-				t.Errorf("Median() = %v, want %v", got, tt.expected)
+				t.Errorf("Median() = %v, expected %v", got, tt.expected)
 			}
 		})
 	}
