@@ -7,16 +7,23 @@ func TestStandardDiviation(t *testing.T) {
 		x []float64
 	}
 	tests := []struct {
-		name string
-		args args
-		want int
+		name     string
+		args     args
+		expected int
 	}{
-		{name: "Known SD", args: args{[]float64{1.0, 2.0, 3.0}}, want: 1},
+		{name: "Known SD", args: args{[]float64{
+			189,
+			113,
+			121,
+			114,
+			145,
+			110,
+		}}, expected: 28},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := StandardDiviation(tt.args.x); got != tt.want {
-				t.Errorf("StandardDiviation() = %v, want %v", got, tt.want)
+			if got := StandardDiviation(tt.args.x); got != tt.expected {
+				t.Errorf("StandardDiviation() = %v, expected %v", got, tt.expected)
 			}
 		})
 	}
