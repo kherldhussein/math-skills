@@ -1,5 +1,6 @@
 package main
 
+// Variance is the expected value of the squared deviation from the mean of a random variable.
 func Variance(x []float64) int {
 	m := Average(x)
 	t := 0
