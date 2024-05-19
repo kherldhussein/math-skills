@@ -1,5 +1,6 @@
 package main
 
+// The standard deviation is a measure of the amount of variation of a random variable expected about its mean.
 func StandardDiviation(x []float64) int {
 	if len(x) == 0 {
 		return 0
