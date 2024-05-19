@@ -1,18 +1,18 @@
 package main
 
+// The median of a set of numbers is the value separating the higher half from the lower half of a data sample, a population, or a probability distribution.
 func Median(x []float64) int {
 	l := len(x)
 	y := true
 	if l == 0 {
 		return 0
 	}
+	// Bubble Sort Algorithm
 	for y {
 		y = false
 		for i := 0; i < l-1; i++ {
 			if x[i] > x[i+1] {
-				tmp := x[i]
-				x[i] = x[i+1]
-				x[i+1] = tmp
+				x[i], x[i+1] = x[i+1], x[i]
 				y = true
 			}
 		}
