@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"math"
 	"os"
 )
 
@@ -17,11 +18,11 @@ func main() {
 
 	mean := Average(data)
 	median := Median(data)
-	variance := Variance(data)
-	sd := StandardDiviation(data)
+	variance := Variance(data, mean)
+	sd := math.Sqrt(variance)
 
-	fmt.Printf("Average: %v\n", mean)
-	fmt.Printf("Median: %v\n", median)
-	fmt.Printf("Variance: %v\n", variance)
-	fmt.Printf("Standard Deviation: %v\n", sd)
+	fmt.Printf("Average: %v\n", math.Round(mean))
+	fmt.Printf("Median: %v\n", math.Round(median))
+	fmt.Printf("Variance: %v\n", int(math.Round(variance)))
+	fmt.Printf("Standard Deviation: %v\n", math.Round(sd))
 }
