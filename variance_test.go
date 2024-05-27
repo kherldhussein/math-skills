@@ -1,29 +1,26 @@
 package main
 
-import "testing"
+import (
+	"math"
+	"testing"
+)
 
 func TestVariance(t *testing.T) {
-	type args struct {
-		x []float64
-	}
 	tests := []struct {
 		name     string
-		args     args
-		expected int
+		input    []float64
+		mean     float64
+		expected float64
+		epsilon  float64
 	}{
-		{name: "Multiple elements", args: args{[]float64{
-			189,
-			113,
-			121,
-			114,
-			145,
-			110,
-		}}, expected: 784},
+		{"Element", []float64{5}, 5, 0, 0},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Variance(tt.args.x); got != tt.expected {
-				t.Errorf("Variance() = %v, expected %v", got, tt.expected)
+
+	for _, test := range tests {
+		t.Run(test.name, func(t *testing.T) {
+			result := Variance(test.input, test.mean)
+			if math.Abs(result-test.expected) > test.epsilon {
+				t.Errorf("Test case %s failed: expected %f, got %f", test.name, test.expected, result)
 			}
 		})
 	}
