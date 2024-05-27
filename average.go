@@ -1,7 +1,7 @@
 package main
 
 // Average is a single number or value that best represents a set of data.
-func Average(x []float64) int {
+func Average(x []float64) float64 {
 	if len(x) == 0 {
 		return 0
 	}
@@ -9,5 +9,5 @@ func Average(x []float64) int {
 	for _, x1 := range x {
 		total += x1
 	}
-	return int(total / float64(len(x)))
+	return total / float64(len(x))
 }
