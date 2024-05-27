@@ -1,7 +1,7 @@
 package main
 
 // The median of a set of numbers is the value separating the higher half from the lower half of a data sample, a population, or a probability distribution.
-func Median(x []float64) int {
+func Median(x []float64) float64 {
 	l := len(x)
 	y := true
 	if l == 0 {
@@ -19,8 +19,8 @@ func Median(x []float64) int {
 	}
 	idx := l / 2
 	if l%2 == 0 {
-		return int((x[idx-1] + x[idx]) / 2.0)
+		return (x[idx-1] + x[idx]) / 2.0
 	} else {
-		return int(x[idx])
+		return x[idx]
 	}
 }

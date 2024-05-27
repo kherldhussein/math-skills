@@ -9,7 +9,7 @@ func TestMedian(t *testing.T) {
 	tests := []struct {
 		name     string
 		args     args
-		expected int
+		expected float64
 	}{
 		{name: "Even elements, decimals", args: args{x: []float64{1.5, 2.5}}, expected: 2},
 	}
